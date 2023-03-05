@@ -11,6 +11,7 @@
 		BDB2E0DA29B43BFE002784E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB2E0D929B43BFE002784E7 /* ContentView.swift */; };
 		BDB2E0DC29B43C00002784E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB2E0DB29B43C00002784E7 /* Assets.xcassets */; };
 		BDB2E0DF29B43C00002784E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB2E0DE29B43C00002784E7 /* Preview Assets.xcassets */; };
+		BDB2E0E629B43C91002784E7 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB2E0E529B43C91002784E7 /* ImagePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		BDB2E0D929B43BFE002784E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BDB2E0DB29B43C00002784E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDB2E0DE29B43C00002784E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BDB2E0E529B43C91002784E7 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				BDB2E0D729B43BFE002784E7 /* MyCameraApp.swift */,
 				BDB2E0D929B43BFE002784E7 /* ContentView.swift */,
+				BDB2E0E529B43C91002784E7 /* ImagePickerView.swift */,
 				BDB2E0DB29B43C00002784E7 /* Assets.xcassets */,
 				BDB2E0DD29B43C00002784E7 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDB2E0DA29B43BFE002784E7 /* ContentView.swift in Sources */,
+				BDB2E0E629B43C91002784E7 /* ImagePickerView.swift in Sources */,
 				BDB2E0D829B43BFE002784E7 /* MyCameraApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
