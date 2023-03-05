@@ -20,7 +20,7 @@ struct ContentView: View {
             if let captureImage {
                 Image(uiImage: captureImage)
                     .resizable()
-                    // アスペクト比(縦横比)を維持して画面に収める
+                // アスペクト比(縦横比)を維持して画面に収める
                     .scaledToFit()
             }
             
@@ -37,11 +37,11 @@ struct ContentView: View {
                 }
             } label: {
                 Text("カメラを起動する")
-                    // 横幅いっぱい
+                // 横幅いっぱい
                     .frame(maxWidth: .infinity)
-                    // 高さ50ポイントを指定
+                // 高さ50ポイントを指定
                     .frame(height: 50)
-                    // 文字列をセンタリング指定
+                // 文字列をセンタリング指定
                     .multilineTextAlignment(.center)
                     .background(Color.blue)
                     .foregroundColor(Color.white)
@@ -51,6 +51,21 @@ struct ContentView: View {
             .sheet(isPresented: $isShowSheet) {
                 // UIImagePickerController(写真撮影)を表示
                 ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+            }
+            
+            // captureImageをアンラップする
+            if let captureImage,
+               // captureImageから共有する画像を生成する
+               let shareImage = Image(uiImage: captureImage) {
+                // 共有シート
+                ShareLink(item: shareImage, subject: nil, message: nil,preview: SharePreview("Photo", image: shareImage)) {
+                    Text("SNSに投稿する")
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 50)
+                        .background(Color.blue)
+                        .foregroundColor(Color.white)
+                        .padding()
+                }
             }
         }
     }
