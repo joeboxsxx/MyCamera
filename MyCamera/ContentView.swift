@@ -20,15 +20,6 @@ struct ContentView: View {
         VStack {
             Spacer()
             
-            if let captureImage {
-                Image(uiImage: captureImage)
-                    .resizable()
-                // アスペクト比(縦横比)を維持して画面に収める
-                    .scaledToFit()
-            }
-            
-            Spacer()
-            
             Button {
                 // カメラが利用可能かチェック
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
