@@ -84,21 +84,6 @@ struct ContentView: View {
                     }
                 }
             }
-            
-            // captureImageをアンラップする
-            if let captureImage,
-               // captureImageから共有する画像を生成する
-               let shareImage = Image(uiImage: captureImage) {
-                // 共有シート
-                ShareLink(item: shareImage, subject: nil, message: nil,preview: SharePreview("Photo", image: shareImage)) {
-                    Text("SNSに投稿する")
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 50)
-                        .background(Color.blue)
-                        .foregroundColor(Color.white)
-                        .padding()
-                }
-            }
         }
     }
 }
