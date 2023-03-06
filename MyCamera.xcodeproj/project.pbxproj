@@ -13,6 +13,7 @@
 		BDB2E0DF29B43C00002784E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB2E0DE29B43C00002784E7 /* Preview Assets.xcassets */; };
 		BDB2E0E629B43C91002784E7 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB2E0E529B43C91002784E7 /* ImagePickerView.swift */; };
 		BDB2E0E829B5BF26002784E7 /* EffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB2E0E729B5BF26002784E7 /* EffectView.swift */; };
+		BDB2E0EA29B5F341002784E7 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB2E0E929B5F340002784E7 /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		BDB2E0DE29B43C00002784E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BDB2E0E529B43C91002784E7 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		BDB2E0E729B5BF26002784E7 /* EffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectView.swift; sourceTree = "<group>"; };
+		BDB2E0E929B5F340002784E7 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				BDB2E0D729B43BFE002784E7 /* MyCameraApp.swift */,
 				BDB2E0D929B43BFE002784E7 /* ContentView.swift */,
+				BDB2E0E929B5F340002784E7 /* UIImageExtension.swift */,
 				BDB2E0E729B5BF26002784E7 /* EffectView.swift */,
 				BDB2E0E529B43C91002784E7 /* ImagePickerView.swift */,
 				BDB2E0DB29B43C00002784E7 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 				BDB2E0DA29B43BFE002784E7 /* ContentView.swift in Sources */,
 				BDB2E0E629B43C91002784E7 /* ImagePickerView.swift in Sources */,
 				BDB2E0D829B43BFE002784E7 /* MyCameraApp.swift in Sources */,
+				BDB2E0EA29B5F341002784E7 /* UIImageExtension.swift in Sources */,
 				BDB2E0E829B5BF26002784E7 /* EffectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
