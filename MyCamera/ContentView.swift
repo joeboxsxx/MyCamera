@@ -24,6 +24,8 @@ struct ContentView: View {
                 // カメラが利用可能かチェック
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     print("カメラは利用できます")
+                    // 撮影写真を初期化する
+                    captureImage = nil
                     // isShowSheetをtrue
                     isShowSheet.toggle()
                 } else {
@@ -43,8 +45,13 @@ struct ContentView: View {
             .padding()
             // isPresentedで指定した状態変数がtrueのとき実行
             .sheet(isPresented: $isShowSheet) {
-                // UIImagePickerController(写真撮影)を表示
-                ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                if let captureImage {
+                    // 撮影した写真がある→EffectViewを表示する
+                    EffectView(isShowSheet: $isShowSheet, captureImage: captureImage)
+                } else {
+                    // UIImagePickerController(写真撮影)を表示
+                    ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                }
             }
             
             // フォトライブラリーから選択する
@@ -65,6 +72,8 @@ struct ContentView: View {
                     case .success(let data):
                         // 写真があるとき
                         if let data {
+                            // 撮影写真を初期化する
+                            captureImage = nil
                             // 写真をcaptureImageに保存
                             captureImage = UIImage(data: data)
                         }
@@ -74,6 +83,13 @@ struct ContentView: View {
                         
                     }
                 }
+            }
+        }
+        // 撮影した写真を保持する状態変数が変化したら実行する
+        .onChange(of: captureImage) { image in
+            if let _ = image {
+                // 撮影した写真がある→EffectViewを表示する
+                isShowSheet.toggle()
             }
         }
     }
